@@ -4,7 +4,6 @@ import models.Manager;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
-import views.html.index;
 
 public class Application extends Controller {
 
@@ -16,6 +15,10 @@ public class Application extends Controller {
 
 	public static Result login() {
 		return ok(views.html.login.render("Hello", loginForm));
+	}
+	
+	public static Result checkLogin(){
+		return TODO;
 	}
 
 }

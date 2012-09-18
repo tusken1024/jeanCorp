@@ -42,7 +42,7 @@ legend {
 		<div class="row">
 			<div class="login-form">
 				<h2>Login</h2>
-				<form action="">
+				@helper.form(routes.Application.checkLogin()) {
 					<fieldset>
 						<div class="clearfix">
 							<input type="text" placeholder="Username">
@@ -52,7 +52,7 @@ legend {
 						</div>
 						<button class="btn btn-primary" type="submit">Sign in</button>
 					</fieldset>
-				</form>
+				}
 			</div>
 		</div>
 	</div>
