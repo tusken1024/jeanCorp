@@ -45,10 +45,10 @@ legend {
 				@helper.form(routes.Application.checkLogin()) {
 					<fieldset>
 						<div class="clearfix">
-							<input type="text" placeholder="Username">
+							<input type="text" placeholder="Username" value="" name="login">
 						</div>
 						<div class="clearfix">
-							<input type="password" placeholder="Password">
+							<input type="password" placeholder="Password" name="password">
 						</div>
 						<button class="btn btn-primary" type="submit">Sign in</button>
 					</fieldset>

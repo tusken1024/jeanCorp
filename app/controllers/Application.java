@@ -18,6 +18,10 @@ public class Application extends Controller {
 	}
 	
 	public static Result checkLogin(){
+		Form<Manager> filledForm = loginForm.bindFromRequest();
+		if(filledForm.hasErrors()){
+			return badRequest(views.html.login.render("Error",loginForm));
+		}
 		return TODO;
 	}
 
