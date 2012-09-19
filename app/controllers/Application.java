@@ -16,13 +16,17 @@ public class Application extends Controller {
 	public static Result login() {
 		return ok(views.html.login.render("Hello", loginForm));
 	}
-	
-	public static Result checkLogin(){
+
+	public static Result checkLogin() {
 		Form<Manager> filledForm = loginForm.bindFromRequest();
-		if(filledForm.hasErrors()){
-			return badRequest(views.html.login.render("Error",loginForm));
+		if (filledForm.hasErrors()) {
+			return badRequest(views.html.login.render("Error", loginForm));
 		}
-		return TODO;
+		return redirect(routes.Application.accueil());
+	}
+
+	public static Result accueil() {
+		return ok(views.html.accueil.render("Hello"));
 	}
 
 }
