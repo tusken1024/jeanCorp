@@ -3,6 +3,8 @@ package models;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import org.apache.commons.lang.StringUtils;
+
 import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
 
@@ -41,4 +43,12 @@ public class Manager extends Model {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	public String validate() {
+		if (StringUtils.equalsIgnoreCase(login, "admin")
+				&& StringUtils.equalsIgnoreCase(password, "admin")) {
+			return null;
+		}
+        return "OK";
+    }
 }
