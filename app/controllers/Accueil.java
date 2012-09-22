@@ -12,5 +12,4 @@ public class Accueil extends Controller {
 		return ok(views.html.accueil.render("Hello"));
 	}
 
-	
 }

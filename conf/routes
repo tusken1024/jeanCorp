@@ -8,7 +8,7 @@ GET		/                           controllers.Application.index()
 #Login Page
 GET		/login						controllers.Application.login()
 POST	/login						controllers.Application.checkLogin()
-GET		/logout						controllers.Application.logout()
+POST	/logout						controllers.Application.logout()
 
 #Accueil
 GET		/accueil					controllers.Accueil.accueil()
