@@ -11,6 +11,8 @@ import play.db.ebean.Model;
 @Entity
 public class Manager extends Model {
 
+	private static final long serialVersionUID = -5307644880100609692L;
+
 	@Id
 	private Long id;
 
@@ -49,6 +51,6 @@ public class Manager extends Model {
 				&& StringUtils.equalsIgnoreCase(password, "admin")) {
 			return null;
 		}
-        return "OK";
-    }
+		return "OK";
+	}
 }
