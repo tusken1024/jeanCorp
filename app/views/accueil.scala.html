@@ -52,15 +52,25 @@
 						<th>Hours</th>
 					</tr>
 				</thead>
-				@for(employee <- employees) {
+				@for(i <- 0 until 5) {
 				<tr>
-					<td>@employee.id</td>
-					<td>@employee.firstName @employee.name</td>
-					<td>@employee.payout</td>
-					<td>@employee.workHours</td>
+					<td>@employees(i).id</td>
+					<td>@employees(i).firstName @employees(i).name</td>
+					<td>@employees(i).payout</td>
+					<td>@employees(i).workHours</td>
 				</tr>
 				}
 			</table>
+			
+			<div class="pagination">
+			 <ul>
+				<li class="disabled"><a href="#">Prev</a></li>
+				<li class="active"><a href="#">1</a></li>
+				<li class="active"><a href="#">2</a></li>
+				<li class="active"><a href="#">3</a></li>
+				<li class="disabled"><a href="#">Next</a></li>
+			 </ul>
+			</div>
 		</div>
 		<div id="lB" class="tab-pane">
 			<p>Je suis dans tab : materiel</p>
