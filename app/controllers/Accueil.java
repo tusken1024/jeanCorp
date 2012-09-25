@@ -1,5 +1,8 @@
 package controllers;
 
+import java.util.List;
+
+import models.Employee;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;
@@ -8,7 +11,8 @@ import play.mvc.Security;
 public class Accueil extends Controller {
 
 	public static Result accueil() {
-		return ok(views.html.accueil.render("Hello"));
+		List<Employee> employees = Employee.findAll();
+		return ok(views.html.accueil.render("Hello" , employees));
 	}
 
 }

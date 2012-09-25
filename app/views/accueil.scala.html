@@ -1,4 +1,4 @@
-@(message: String) @main("Welcome to Play 2.0") {
+@(message: String, employees: List[Employee]) @main("Welcome to Play 2.0") {
 
 <div class="navbar navbar-static-top navbar-inverse">
 	<div class="navbar-inner">
@@ -42,6 +42,25 @@
 	<div class="tab-content">
 		<div id="lA" class="tab-pane active">
 			<p>Je suis dans tab : Personnel</p>
+			
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Nom Prenom</th>
+						<th>Payout Rate</th>
+						<th>Hours</th>
+					</tr>
+				</thead>
+				@for(employee <- employees) {
+				<tr>
+					<td>@employee.id</td>
+					<td>@employee.firstName @employee.name</td>
+					<td>@employee.payout</td>
+					<td>@employee.workHours</td>
+				</tr>
+				}
+			</table>
 		</div>
 		<div id="lB" class="tab-pane">
 			<p>Je suis dans tab : materiel</p>
